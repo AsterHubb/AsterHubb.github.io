@@ -83,7 +83,7 @@
             display: block;
         }
 
-        header, main, footer {
+        header, main {
             padding: 30px;
             margin: 20px auto;
             border-radius: 10px;
@@ -93,11 +93,80 @@
             z-index: 1;
         }
 
+        .descargas {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .descargas h3 {
+            color: #fff;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .plataformas {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .boton-descarga {
+            font-family: 'PixelAND', Arial, sans-serif;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .boton-descarga:hover {
+            transform: translateY(-3px);
+        }
+
+        .windows {
+            background-color: #0078d4;
+        }
+
+        .android {
+            background-color: #3ddc84;
+        }
+
+        .plataformas img {
+            width: 24px;
+            height: 24px;
+        }
+
         p {
             font-family: 'PixelAND', Arial, sans-serif;
             color: #fff;
             line-height: 1.6;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+        
+        .social-links a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .social-links a:hover {
+            color: #007bff;
+        }
+
+        .social-links span {
+            color: #fff;
+            margin: 0 5px;
         }
 
         footer {
@@ -110,7 +179,7 @@
 </head>
 <body>
 
-    <img src="/images/poster.png" alt="Póster de "A New Dawn"" class="poster">
+    <img src="/images/poster.png" alt="Póster de A New Dawn" class="poster">
 
     <header>
         <h1>A New Dawn</h1>
@@ -120,10 +189,23 @@
     <main>
         <p>¡Bienvenido a "A New Dawn"! Prepárate para una aventura inolvidable.</p>
         <button class="boton" onclick="mostrarMensaje()">¡Explorar ahora!</button>
+
+        <section class="descargas">
+            <h3>Plataformas disponibles</h3>
+            <div class="plataformas">
+                <a href="/dw/v0.0.6_8-build.zip" download class="boton-descarga windows"><img src="/images/windows-icon.png" alt="Windows Icon"> Windows</a>
+                <a href="#" class="boton-descarga android" onclick="alert('Próximamente disponible en Android!')"><img src="/images/android-icon.png" alt="Android Icon"> Android</a>
+            </div>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Dawncrest Games - Desarrollando con pasión - By LG</p>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@masterstudiotm" target="_blank" rel="noopener noreferrer">YouTube</a>
+            <span>|</span>
+            <a href="https://www.tiktok.com/@anewdawn71" target="_blank" rel="noopener noreferrer">TikTok</a>
+        </div>
     </footer>
 
     <script>
@@ -134,11 +216,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
