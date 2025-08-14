@@ -83,7 +83,7 @@
             display: block;
         }
 
-        header, main, .game-description {
+        header, main {
             padding: 30px;
             margin: 20px auto;
             border-radius: 10px;
@@ -103,6 +103,63 @@
             margin-top: 40px;
             padding-top: 20px;
             border-top: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .updates {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .updates h3 {
+            color: #fff;
+            font-size: 1.5em;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+            margin-bottom: 20px;
+        }
+
+        .updates .patch-note {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            text-align: left;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .patch-note h4 {
+            font-size: 1.2em;
+            color: #fff;
+            margin: 0 0 5px 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .patch-note p {
+            font-size: 0.9em;
+            color: #ccc;
+            margin: 0;
+            text-shadow: none;
+        }
+
+        .patch-note ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 10px;
+        }
+
+        .patch-note ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        .patch-note ul li::before {
+            content: "•";
+            color: #248d54;
+            font-size: 1.2em;
+            position: absolute;
+            left: 0;
         }
 
         .descargas h3, .game-description h3 {
@@ -177,7 +234,7 @@
 
         footer {
             margin-top: 50px;
-            background-color: rgba(0, 0, 0, 0.0);
+            background-color: rgba(0, 0, 0, 0.7);
             color: #ccc;
             padding: 20px;
         }
@@ -188,7 +245,7 @@
     <img src="/images/poster.png" alt="Póster de A New Dawn" class="poster">
 
     <header>
-        <h1>A New Dawn</h1>
+        <h1>Sitio web oficial de A New Dawn</h1>
         <h2>En desarrollo y probando</h2>
     </header>
 
@@ -207,8 +264,30 @@
         <section class="game-description">
             <h3>Acerca del juego</h3>
             <p>
-                Este es el amanecer de un nuevo mundo, uno en el que la humanidad apenas sobrevive. En **A New Dawn**, la tierra ha sido devastada por un evento cataclísmico, y cada día es una lucha por la supervivencia. Sumérgete en un mundo abierto donde cada decisión es crucial. Explora paisajes desolados, busca recursos para fabricar armas y equipamiento con mecánicas semi-realistas, y enfréntate a enemigos mortales, desde mutantes y zombis hasta otros supervivientes, que podrían ser aliados o la próxima amenaza. ¿Encontrarás a otros para formar alianzas y construir una fortaleza o te aventurarás solo en las sombras? El mundo está lleno de secretos y peligros, y solo el más fuerte, y el más astuto, sobrevivirá. Prepárate para una experiencia de supervivencia única con un modo historia que te mantendrá al borde del asiento.
+                Bienvenido al amanecer de un nuevo mundo, uno en el que la humanidad apenas sobrevive. En **A New Dawn**, la tierra ha sido devastada por un evento cataclísmico, y cada día es una lucha por la supervivencia. Sumérgete en un mundo abierto donde cada decisión es crucial. Explora paisajes desolados, busca recursos para fabricar armas y equipamiento con mecánicas semi-realistas, y enfréntate a enemigos mortales, desde mutantes y zombis hasta otros supervivientes, que podrían ser aliados o la próxima amenaza. ¿Encontrarás a otros para formar alianzas y construir una fortaleza o te aventurarás solo en las sombras? El mundo está lleno de secretos y peligros, y solo el más fuerte, y el más astuto, sobrevivirá. Prepárate para una experiencia de supervivencia única con un modo historia que te mantendrá al borde del asiento.
             </p>
+        </section>
+
+        <section class="updates">
+            <h3>Actualizaciones del juego</h3>
+            <div class="patch-note">
+                <h4>Versión 0.0.2 (15 de julio, 2025)</h4>
+                <p>desarrollo interno del proyecto.</p>
+                <ul>
+                    <li>Primeros prototipos del sistema de inventario.</li>
+                    <li>Cambio de texturas al mapa.</li>
+                    <li>Se añadieron las primeras colisiones a objetos.</li>
+                </ul>
+            </div>
+            <div class="patch-note">
+                <h4>Versión 0.0.1 (13 de julio, 2025)</h4>
+                <p>Inicio del desarrollo interno del proyecto.</p>
+                <ul>
+                    <li>Comienzo de la creación de la arquitectura del juego.</li>
+                    <li>Creacion e implementacion el movimiento del personaje y la interacción con el entorno básico.</li>
+                    <li>Diseño inicial del mapa.</li>
+                </ul>
+            </div>
         </section>
     </main>
 
@@ -229,4 +308,3 @@
 
 </body>
 </html>
-
