@@ -73,6 +73,30 @@
         .boton:hover {
             background-color: #0056b3;
         }
+        
+        .cta-message {
+            margin-top: 20px;
+        }
+        
+        .cta-message p {
+            font-size: 1.1em;
+        }
+        
+        .cta-message a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            margin: 0 5px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        
+        .cta-message a:hover {
+            color: #fff;
+            background-color: rgba(255, 255, 255, 0.2);
+        }
 
         .poster {
             max-width: 60%;
@@ -111,6 +135,24 @@
             transition: opacity 0.6s ease-out, transform 0.6s ease-out;
         }
 
+        .features {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .gallery {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
         .updates {
             margin-top: 40px;
             padding-top: 20px;
@@ -125,11 +167,59 @@
             transform: translateY(0);
         }
 
-        .updates h3 {
+        .features h3, .updates h3, .gallery h3 {
             color: #fff;
             font-size: 1.5em;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
             margin-bottom: 20px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .feature-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .feature-item img {
+            width: 50px;
+            height: 50px;
+            margin-bottom: 10px;
+        }
+        
+        .feature-item h4 {
+            font-size: 1.2em;
+            color: #fff;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .gallery .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .gallery-item img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
         }
 
         .updates .patch-note {
@@ -264,8 +354,15 @@
     </header>
 
     <main>
-        <p>¡Bienvenido a "A New Dawn"! Prepárate para una aventura inolvidable.</p>
-        <button class="boton" onclick="mostrarMensaje()">¡Explorar ahora!</button>
+        <div class="cta-message">
+            <p>
+                ¡Gracias por tu interés! A New Dawn está actualmente en desarrollo. 
+                Sigue de cerca el progreso y los anuncios exclusivos en nuestras redes sociales:
+                <a href="https://www.youtube.com/@masterstudiotm" target="_blank" rel="noopener noreferrer">YouTube</a> 
+                <span>|</span> 
+                <a href="https://www.tiktok.com/@anewdawn71" target="_blank" rel="noopener noreferrer">TikTok</a>
+            </p>
+        </div>
 
         <section class="descargas">
             <h3>Plataformas disponibles</h3>
@@ -280,6 +377,42 @@
             <p>
                 Bienvenido al amanecer de un nuevo mundo, uno en el que la humanidad apenas sobrevive. En **A New Dawn**, la tierra ha sido devastada por un evento cataclísmico, y cada día es una lucha por la supervivencia. Sumérgete en un mundo abierto donde cada decisión es crucial. Explora paisajes desolados, busca recursos para fabricar armas y equipamiento con mecánicas semi-realistas, y enfréntate a enemigos mortales, desde mutantes y zombis hasta otros supervivientes, que podrían ser aliados o la próxima amenaza. ¿Encontrarás a otros para formar alianzas y construir una fortaleza o te aventurarás solo en las sombras? El mundo está lleno de secretos y peligros, y solo el más fuerte, y el más astuto, sobrevivirá. Prepárate para una experiencia de supervivencia única con un modo historia que te mantendrá al borde del asiento.
             </p>
+        </section>
+
+        <section class="features">
+            <h3>Características Clave</h3>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <img src="/images/survival-icon.png" alt="Icono de supervivencia">
+                    <h4>Supervivencia Realista</h4>
+                    <p>Gestiona tu hambre, sed y refugio para sobrevivir en un mundo post-apocalíptico.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="/images/crafting-icon.png" alt="Icono de crafteo">
+                    <h4>Crafteo y Personalización</h4>
+                    <p>Fabrica tus propias armas y herramientas con un sistema de crafteo intuitivo.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="/images/story-icon.png" alt="Icono de historia">
+                    <h4>Modo Historia Profundo</h4>
+                    <p>Sumérgete en una narrativa cautivadora mientras descubres los secretos del nuevo mundo.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="/images/enemies-icon.png" alt="Icono de enemigos">
+                    <h4>Enemigos y Alianzas</h4>
+                    <p>Lucha contra mutantes, zombis y otros supervivientes. Elige bien a tus aliados.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery-section">
+            <h3>Galería de Imágenes</h3>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="/images/Captura de pantalla (7).png" alt="Captura de pantalla 1 del juego"></div>
+                <div class="gallery-item"><img src="/images/Captura de pantalla (49).jpg" alt="Captura de pantalla 2 del juego"></div>
+                <div class="gallery-item"><img src="/images/Captura de pantalla (51).jpg" alt="Captura de pantalla 3 del juego"></div>
+                <div class="gallery-item"><img src="/images/Captura de pantalla (65).jpg" alt="Captura de pantalla 4 del juego"></div>
+            </div>
         </section>
 
         <section class="updates">
@@ -306,7 +439,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 Dawncrest Games LG - Desarrollando con pasión</p>
+        <p>&copy; 2025 Dawncrest Games LG- Desarrollando con pasión</p>
         <div class="social-links">
             <a href="https://www.youtube.com/@masterstudiotm" target="_blank" rel="noopener noreferrer">YouTube</a>
             <span>|</span>
@@ -315,12 +448,8 @@
     </footer>
 
     <script>
-        function mostrarMensaje() {
-            alert("¡Esta función aún está en desarrollo! 😉");
-        }
-
         document.addEventListener('DOMContentLoaded', () => {
-            const sections = document.querySelectorAll('.descargas, .game-description, .updates');
+            const sections = document.querySelectorAll('.descargas, .game-description, .features, .updates, .gallery');
 
             const observer = new IntersectionObserver(entries => {
                 entries.forEach(entry => {
@@ -341,4 +470,3 @@
     </script>
 </body>
 </html>
-
