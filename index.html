@@ -83,7 +83,7 @@
             display: block;
         }
 
-        header, main {
+        header, main, .game-description {
             padding: 30px;
             margin: 20px auto;
             border-radius: 10px;
@@ -99,7 +99,13 @@
             border-top: 2px solid rgba(255, 255, 255, 0.2);
         }
 
-        .descargas h3 {
+        .game-description {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .descargas h3, .game-description h3 {
             color: #fff;
             font-size: 1.5em;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -197,6 +203,13 @@
                 <a href="#" class="boton-descarga android" onclick="alert('Próximamente disponible en Android!')"><img src="/images/android-icon.png" alt="Android Icon"> Android</a>
             </div>
         </section>
+
+        <section class="game-description">
+            <h3>Acerca del juego</h3>
+            <p>
+                Este es el amanecer de un nuevo mundo, uno en el que la humanidad apenas sobrevive. En **A New Dawn**, la tierra ha sido devastada por un evento cataclísmico, y cada día es una lucha por la supervivencia. Sumérgete en un mundo abierto donde cada decisión es crucial. Explora paisajes desolados, busca recursos para fabricar armas y equipamiento con mecánicas semi-realistas, y enfréntate a enemigos mortales, desde mutantes y zombis hasta otros supervivientes, que podrían ser aliados o la próxima amenaza. ¿Encontrarás a otros para formar alianzas y construir una fortaleza o te aventurarás solo en las sombras? El mundo está lleno de secretos y peligros, y solo el más fuerte, y el más astuto, sobrevivirá. Prepárate para una experiencia de supervivencia única con un modo historia que te mantendrá al borde del asiento.
+            </p>
+        </section>
     </main>
 
     <footer>
@@ -216,4 +229,3 @@
 
 </body>
 </html>
-
